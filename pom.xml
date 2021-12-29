@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.6</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.gluonhq</groupId>
+	<artifactId>spring-ignite-demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-ignite-demo</name>
+	<description>Demo project for Spring Boot with Gluon Ignite</description>
+	<properties>
+		<java.version>11</java.version>
+		<javafxVersion>17.0.0.1</javafxVersion>
+		<javafx-maven-plugin-version>0.0.8</javafx-maven-plugin-version>
+		<mainClassName>com.gluonhq.springignitedemo.SpringIgniteDemoApplication</mainClassName>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>${javafxVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>${javafxVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.gluonhq</groupId>
+			<artifactId>ignite-spring</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>${javafx-maven-plugin-version}</version>
+				<configuration>
+<!--					<options>-->
+<!--						<option>-Dcharm-desktop-form=${form.factor}</option>-->
+<!--						<option>&#45;&#45;add-opens</option>-->
+<!--						<option>javafx.graphics/javafx.scene.text=richtextfx</option>-->
+<!--						<option>&#45;&#45;add-opens</option>-->
+<!--						<option>javafx.graphics/com.sun.javafx.text=richtextfx</option>-->
+<!--						<option>&#45;&#45;add-opens</option>-->
+<!--						<option>javafx.graphics/com.sun.javafx.scene.text=richtextfx</option>-->
+<!--						<option>&#45;&#45;add-opens</option>-->
+<!--						<option>javafx.graphics/com.sun.javafx.geom=richtextfx</option>-->
+<!--						<option>&#45;&#45;add-opens</option>-->
+<!--						<option>javafx.graphics/com.sun.javafx.css=org.controlsfx.controls</option>-->
+<!--					</options>-->
+					<mainClass>${mainClassName}</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<!-- Default configuration for running -->
+						<id>default-cli</id>
+						<configuration>
+							<mainClass>${mainClassName}</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<!-- Configuration for debugging -->
+						<id>debug</id>
+						<configuration>
+<!--							<options>-->
+<!--								<option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:8000</option>-->
+<!--								<option>-Dcharm-desktop-form=${form.factor}</option>-->
+<!--								<option>&#45;&#45;add-opens</option>-->
+<!--								<option>javafx.graphics/javafx.scene.text=richtextfx</option>-->
+<!--								<option>&#45;&#45;add-opens</option>-->
+<!--								<option>javafx.graphics/com.sun.javafx.text=richtextfx</option>-->
+<!--								<option>&#45;&#45;add-opens</option>-->
+<!--								<option>javafx.graphics/com.sun.javafx.scene.text=richtextfx</option>-->
+<!--								<option>&#45;&#45;add-opens</option>-->
+<!--								<option>javafx.graphics/com.sun.javafx.geom=richtextfx</option>-->
+<!--								<option>&#45;&#45;add-opens</option>-->
+<!--								<option>javafx.graphics/com.sun.javafx.css=org.controlsfx.controls</option>-->
+<!--							</options>-->
+							<mainClass>${mainClassName}</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
