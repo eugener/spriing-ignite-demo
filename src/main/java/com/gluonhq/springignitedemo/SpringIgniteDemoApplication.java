@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 import java.io.IOException;
 
 @SpringBootApplication
-@ComponentScan("com.gluonhq.ignite.spring")
+@ComponentScan( {"com.gluonhq.ignite.spring", "com.gluonhq.springignitedemo"})
 public class SpringIgniteDemoApplication extends Application {
 
 	public static void main(String[] args) {
@@ -36,7 +36,4 @@ public class SpringIgniteDemoApplication extends Application {
 	}
 
 }
-
-
-
 
